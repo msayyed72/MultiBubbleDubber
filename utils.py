@@ -21,10 +21,12 @@ class SimpleTranslator:
             'ru': "Привет! " + text,
             'zh-CN': "你好! " + text
         }
-        # Create an object with a text attribute to mimic the googletrans API
-        result = type('TranslationResult', (), {})
-        result.text = translations.get(dest, text)
-        return result
+        # Create a proper class instance with text attribute
+        class TranslationResult:
+            def __init__(self, text):
+                self.text = text
+                
+        return TranslationResult(translations.get(dest, text))
 
 # Import gtts or create a placeholder
 try:
