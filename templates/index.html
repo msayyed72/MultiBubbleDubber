@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="app-container">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Break Language Barriers</span>
+                        <br>With AI Video Dubbing
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transform your videos into different languages with just a few clicks. 
+                        Powered by advanced AI technology for high-quality dubbing.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#upload-container" class="btn btn-primary btn-lg pulse-btn">
+                            <i class="fas fa-magic"></i> Start Dubbing Now
+                        </a>
+                        <a href="#how-it-works" class="btn btn-outline-light btn-lg ms-3">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                    <div class="supported-langs mt-4">
+                        <span class="badge-lang">English</span>
+                        <span class="badge-lang">Spanish</span>
+                        <span class="badge-lang">French</span>
+                        <span class="badge-lang">German</span>
+                        <span class="badge-lang">Japanese</span>
+                        <span class="badge-lang">+5 more</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image">
+                    <div class="floating-animation">
+                        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4f9.svg" alt="Video Camera" class="hero-icon video-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4ac.svg" alt="Speech Bubble" class="hero-icon speech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f310.svg" alt="Globe" class="hero-icon globe-icon">
+                        <div class="glow-effect"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="section-header text-center">
+            <h2>Powerful Features</h2>
+            <p class="section-subtitle">Everything you need to create professional dubbed videos</p>
+        </div>
+        
+        <div class="row mt-5 g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3>AI Transcription</h3>
+                    <p>Our app uses OpenAI Whisper to accurately transcribe the speech in your videos with industry-leading accuracy.</p>
+                    <div class="feature-details">
+                        <span class="feature-tag">99% Accuracy</span>
+                        <span class="feature-tag">Multiple Accents</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card featured">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Smart Translation</h3>
+                    <p>Google Translate API converts your content into multiple languages while preserving context and meaning.</p>
+                    <div class="feature-details">
+                        <span class="feature-tag">10+ Languages</span>
+                        <span class="feature-tag">Context-Aware</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <h3>Natural Voice Dubbing</h3>
+                    <p>gTTS technology generates natural-sounding speech in your target language, perfectly synchronized with your video.</p>
+                    <div class="feature-details">
+                        <span class="feature-tag">Natural Speech</span>
+                        <span class="feature-tag">Perfect Sync</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-header text-center">
+            <h2>How It Works</h2>
+            <p class="section-subtitle">Three simple steps to dub your videos</p>
+        </div>
+        
+        <div class="steps-container">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Upload Your Video</h3>
+                    <p>Simply drag and drop your video file. We support various formats including MP4, MOV, AVI, and more.</p>
+                </div>
+                <div class="step-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+            </div>
+            
+            <div class="steps-connector"></div>
+            
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Select Target Language</h3>
+                    <p>Choose from our supported languages for your video to be dubbed into.</p>
+                </div>
+                <div class="step-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+            </div>
+            
+            <div class="steps-connector"></div>
+            
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Process & Download</h3>
+                    <p>Our AI does the rest! Transcribes, translates, and dubs your video - then download the result.</p>
+                </div>
+                <div class="step-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Stages -->
+    <section class="app-action" id="app-action">
+        <div class="section-header text-center">
+            <h2>Try It Yourself</h2>
+            <p class="section-subtitle">Experience the power of AI video dubbing now</p>
+        </div>
+        
+        <div class="app-stages">
+            <!-- Stage 1: Upload -->
+            <div class="app-stage active" id="upload-stage">
+                {% include "components/upload.html" %}
+            </div>
+            
+            <!-- Stage 2: Processing -->
+            <div class="app-stage" id="processing-stage">
+                {% include "components/processing.html" %}
+            </div>
+            
+            <!-- Stage 3: Results -->
+            <div class="app-stage" id="results-stage">
+                {% include "components/results.html" %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="section-header text-center">
+            <h2>What Users Say</h2>
+            <p class="section-subtitle">Trusted by content creators worldwide</p>
+        </div>
+        
+        <div class="testimonials-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>"This tool completely changed my YouTube channel. I can now reach audiences in multiple languages with minimal effort."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h5>Sarah Johnson</h5>
+                                <p>Content Creator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card featured">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>"The quality of translation and dubbing is impressive. It's like having a professional dubbing studio at your fingertips!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h5>Michael Chen</h5>
+                                <p>Educational Speaker</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>"I was skeptical at first, but the results exceeded my expectations. My marketing videos now reach global audiences."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h5>Laura Martinez</h5>
+                                <p>Marketing Director</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to break language barriers?</h2>
+            <p>Start dubbing your videos into multiple languages today</p>
+            <a href="#upload-container" class="btn btn-lg btn-light pulse-btn">
+                <i class="fas fa-rocket"></i> Get Started for Free
+            </a>
+        </div>
+    </section>
+</div>
+{% endblock %}

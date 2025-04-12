@@ -1,0 +1,24 @@
+<div class="upload-container" id="upload-container">
+    <div class="upload-area" id="drop-area">
+        <div class="upload-icon">
+            <i class="fas fa-cloud-upload-alt"></i>
+        </div>
+        <h3>Drag & Drop Your Video</h3>
+        <p>or</p>
+        <label for="file-input" class="btn btn-primary">Select File</label>
+        <input type="file" id="file-input" accept="video/*" hidden>
+        <p class="mt-2">Max file size: 100MB</p>
+        <p id="file-name"></p>
+    </div>
+    
+    <div class="language-selector-container mt-4">
+        <h4>Select Target Language</h4>
+        {% include "components/language-selector.html" %}
+    </div>
+    
+    <div class="action-buttons mt-4">
+        <button id="upload-button" class="btn btn-lg btn-primary" disabled>
+            <i class="fas fa-language"></i> Dub Now
+        </button>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="results-container">
+    <div class="results-header">
+        <h2><i class="fas fa-check-circle text-success"></i> Video Processing Complete!</h2>
+        <p class="lead" id="results-message">Your video has been successfully dubbed.</p>
+    </div>
+    
+    <div class="video-container mt-4">
+        <div class="video-wrapper">
+            <video id="result-video" controls>
+                Your browser doesn't support HTML5 video.
+            </video>
+        </div>
+    </div>
+    
+    <div class="results-info mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="info-card">
+                    <h5><i class="fas fa-info-circle"></i> Original Details</h5>
+                    <p><strong>Filename:</strong> <span id="original-filename">video.mp4</span></p>
+                    <p><strong>Duration:</strong> <span id="video-duration">00:00</span></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-card">
+                    <h5><i class="fas fa-language"></i> Dubbed Language</h5>
+                    <p><strong>Language:</strong> <span id="target-language">English</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="action-buttons mt-4">
+        <a id="download-button" href="#" class="btn btn-lg btn-success me-3">
+            <i class="fas fa-download"></i> Download Video
+        </a>
+        <button id="new-dub-button" class="btn btn-lg btn-primary">
+            <i class="fas fa-redo"></i> New Dubbing
+        </button>
+    </div>
+</div>

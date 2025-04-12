@@ -1,0 +1,19 @@
+<div class="language-selector">
+    <div class="form-group">
+        <select id="language-select" class="form-select">
+            {% for code, name in languages.items() %}
+                <option value="{{ code }}" {% if code == 'en' %}selected{% endif %}>{{ name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    
+    <div class="language-preview mt-3">
+        <div class="language-flag">
+            <i class="fas fa-globe-americas"></i>
+        </div>
+        <div class="language-info">
+            <h5 id="selected-language-name">English</h5>
+            <p id="language-info-text">English is the default target language.</p>
+        </div>
+    </div>
+</div>
