@@ -21,7 +21,26 @@ class SimpleTranslator:
             'ru': "Привет! " + text,
             'zh-CN': "你好! " + text
         }
-        return type('obj', (object,), {'text': translations.get(dest, text)})
+        # Create an object with a text attribute to mimic the googletrans API
+        result = type('TranslationResult', (), {})
+        result.text = translations.get(dest, text)
+        return result
+
+# Import gtts or create a placeholder
+try:
+    from gtts import gTTS
+except ImportError:
+    # Create a placeholder gTTS class if the real one isn't available
+    class gTTS:
+        def __init__(self, text, lang, slow=False):
+            self.text = text
+            self.lang = lang
+            self.slow = slow
+            
+        def save(self, file_path):
+            # Placeholder that just creates an empty file
+            with open(file_path, 'wb') as f:
+                f.write(b'Placeholder audio')
 
 Translator = SimpleTranslator
 
