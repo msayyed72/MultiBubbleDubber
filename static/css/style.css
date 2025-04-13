@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, li, span, label, .form-text {
-    color: white !important;
+    color: white;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
     font-weight: 400;
     font-size: 1.05rem;
@@ -1156,7 +1156,7 @@ main {
     line-height: 1.2;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--dark-color);
+    color: white;
 }
 
 .gradient-text {
@@ -1170,7 +1170,7 @@ main {
 .hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    color: var(--gray-700);
+    color: whitesmoke;
     max-width: 90%;
 }
 
@@ -1288,13 +1288,13 @@ main {
 .section-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--dark-color);
+    color: white;
     margin-bottom: 1rem;
 }
 
 .section-subtitle {
     font-size: 1.2rem;
-    color: var(--gray-600);
+    color: whitesmoke;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -1319,7 +1319,7 @@ main {
 
 .feature-card.featured {
     border-color: var(--primary-color);
-    background: linear-gradient(to bottom right, rgba(67, 97, 238, 0.05), rgba(255, 255, 255, 1));
+    
 }
 
 .feature-card.featured .icon-wrapper {
@@ -1336,11 +1336,11 @@ main {
 
 .feature-tag {
     padding: 0.25rem 0.75rem;
-    background-color: var(--gray-100);
+    background-color: var(--primary-color);
     border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 1000;
+    color: whitesmoke;
 }
 
 /* How It Works Section */
@@ -1450,7 +1450,7 @@ main {
 }
 
 .testimonial-card {
-    background-color: white;
+    background-color: var(--primary-color);
     border-radius: var(--border-radius);
     padding: 2rem;
     box-shadow: var(--box-shadow);
@@ -1510,7 +1510,7 @@ main {
 
 .author-info p {
     margin: 0;
-    color: var(--gray-600);
+    color: whitesmoke;
     font-size: 0.85rem;
 }
 
@@ -1521,12 +1521,12 @@ main {
 }
 
 .cta-container {
-    background: var(--gradient-primary);
     padding: 4rem 2rem;
     border-radius: var(--border-radius-lg);
     text-align: center;
     color: white;
     box-shadow: var(--box-shadow-hover);
+    border: 1px solid var(--gray-200);
 }
 
 .cta-container h2 {
